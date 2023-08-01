@@ -5,7 +5,7 @@ export default function Navbar(props) {
     <div>
   <nav className={`navbar navbar-expand-lg navbar-${props.Mode} bg-${props.Mode}`}>
   <div className="container-fluid">
-    <a className="navbar-brand" href="/">Navbar</a>
+    <a className="navbar-brand" href="/">Weather 24/7</a>
   </div>
   <div className={`form-check form-switch text-${props.Mode==='light'?'dark':'light'}`}>
           <input className="form-check-input" onClick={() => {props.toggleMode(null)}}type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
