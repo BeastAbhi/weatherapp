@@ -26,7 +26,6 @@ function App() {
   return (
     <div className="App">
         <Navbar Mode={Mode} toggleMode={toggleMode}/>
-
         <Weather apiKey={apiKey} Mode={Mode}/>
     </div>
   );

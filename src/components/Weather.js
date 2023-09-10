@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import LoadingBar from 'react-top-loading-bar'
 
 function Weather(props) {
-  const [Data, setData] = useState(JSON.parse(localStorage.getItem("weatherData")) || []);
+  const [Data, setData] = useState([]);
   const [city, setCityName] = useState("pune");
   const [name, setName] = useState("");
   const [progress, setProgress] = useState(0)
@@ -23,7 +23,6 @@ function Weather(props) {
     let parseData = await data.json();
     setData(parseData);
     setProgress(50)
-    localStorage.setItem("weatherData", JSON.stringify(parseData));
     setProgress(100)
 
   };
@@ -51,7 +50,7 @@ function Weather(props) {
           Search
         </button>
       </form>
-        <p><b className="text-danger">{Data.error.message}</b> please refresh the page </p>
+        <p><b className="text-danger">City not found</b> please Enter a valid city</p>
       </div>
     )
   }
