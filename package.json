@@ -1,5 +1,5 @@
 {
-  "homepage": "https://BeastAbhi.github.io/my-app",
+  "homepage": "./" ,
   "name": "weatherapp",
   "version": "0.1.0",
   "private": true,
